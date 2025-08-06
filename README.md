@@ -45,3 +45,12 @@ Conocí a personas interesantes del ecosistema, comentarios de clase del profeso
 
 Este trabajo se basa en el ejercicio del bootcamp de Celo Colombia:  
 [Guía oficial del ejercicio](https://github.com/cold-briu/celo-colombia-bootcamp/tree/main/bootcamp/guides/02.session)
+
+## 📚 Anterior clase
+
+- [Clase 1 – Hello Celo](../../tree/01hello-celo)
+
+## 📚 Siguientes clases
+
+- [Clase 3 – cCOP Multisig Wallet](../../tree/03ccop-multisig)
+- [Clase 4 – Uniswap LP Dashboard](../../tree/04lp-dashboard)
