@@ -1,2 +1,11 @@
 .env
 *.env
+
+celo.mp4
+
+
+/broadcast
+/lib
+/out
+/cache
+
