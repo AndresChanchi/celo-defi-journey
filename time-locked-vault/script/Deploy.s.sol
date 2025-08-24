@@ -1,20 +1,20 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
-import "../src/vault.sol"; // Asegúrate de que la ruta sea correcta
+import "../src/vault.sol";
 
 contract DeployScript is Script {
     function run() external {
-        vm.startBroadcast();
+        // Lee clave privada como bytes32 (acepta hex sin 0x)
+        bytes32 key = vm.envBytes32("PRIVATE_KEY");
+        uint256 deployerKey = uint256(key);
 
-        // Despliega el contrato TimeLockVaultFactory
-        TimeLockVaultFactory deployed = new TimeLockVaultFactory(address(0));
-
-        // Muestra la dirección del contrato desplegado
-        console.log("TimeLockVaultFactory desplegado en:", address(deployed));
-
+        vm.startBroadcast(deployerKey);
+        TimeLockVaultFactory factory = new TimeLockVaultFactory(address(0));
         vm.stopBroadcast();
+
+        console.log("Factory deployed at:", address(factory));
     }
 }
 
