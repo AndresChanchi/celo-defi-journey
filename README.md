@@ -35,6 +35,20 @@ Me gustaría explorar si algo así se puede implementar en otras redes como Arbi
 
 ---
 
+## 🖥️ Experiencia integrando la UI
+
+Al llevar este contrato a una interfaz web me encontré con varios retos y aprendizajes:
+
+- La principal dificultad fue entender cómo un cliente (frontend) se comunica con el contrato inteligente. Al inicio traté de usar funciones que ya no eran compatibles (`simulateContract` vs `walletClient.writeContract`), lo que me llevó a errores que parecían más complejos de lo que realmente eran.
+- Me di cuenta de la importancia de estar actualizado con las librerías y herramientas. Una parte del problema era que estaba siguiendo ejemplos antiguos que ya no aplicaban.
+- También aprendí la diferencia entre trabajar solo con terminal (Foundry, cast) y hacerlo desde el navegador: en la terminal controlas todo directamente, mientras que en la UI hay que manejar la firma de transacciones, permisos de la wallet y errores de conexión.
+- Hubo un punto clave: la gestión de la private key. Al inicio no estaba claro cómo integrarla para las pruebas, pero luego entendí que la UI no debe manejar directamente las keys sino delegar todo a la wallet del usuario.
+- Una conclusión importante: **el “cliente” no es solo la persona que usa la app, también es el software (frontend) que actúa como puente entre el usuario y la blockchain**. Ese cambio de mentalidad me ayudó a resolver los bloqueos.
+
+En resumen, esta parte del ejercicio no solo me enseñó a conectar el contrato con una interfaz, sino también a pensar en cómo se diseña la experiencia completa para el usuario, no solo el código del contrato.
+
+---
+
 ## 🌐 Comunidad y recursos
 
 Conocí a personas interesantes del ecosistema, comentarios de clase del profesor, y aprendí del trabajo de gente como:
